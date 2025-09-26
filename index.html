@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-text">
+                <h1><i class="fa-solid fa-square-check"></i> DAILY HABIT TRACKER</h1>
+                <p>Build your routine, track your progress.</p>
+            </div>
+            <div class="header-image-container">
+                <img src="header-image.jpg" alt="Person doing yoga at sunrise">
+                <div class="image-caption">Small Steps, Big Changes.</div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <aside class="habits-section">
+                <h2>MY HABITS</h2>
+                <ul id="habits-list">
+                    </ul>
+                <div class="add-habit-form">
+                    <input type="text" id="new-habit-input" placeholder="Add a new habit...">
+                    <button id="add-habit-btn" title="Add Habit"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </aside>
+
+            <section class="progress-section">
+                <div class="week-navigation">
+                    <button id="prev-week-btn" title="Previous Week"><i class="fa-solid fa-chevron-left"></i></button>
+                    <h2 id="week-display"></h2>
+                    <button id="next-week-btn" title="Next Week"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="progress-grid-container">
+                    <table class="progress-grid">
+                        <thead id="grid-header">
+                            </thead>
+                        <tbody id="grid-body">
+                            </tbody>
+                    </table>
+                </div>
+                <div class="stats-and-controls">
+                    <div class="stats-container">
+                        <div id="streak-info">
+                            <p class="streak-title">🔥 Streak Counter</p>
+                            <p id="streak-placeholder">Select a habit to view its streak.</p>
+                            <div id="streak-display" class="hidden">
+                                <span>Current: <strong id="current-streak">0</strong> days</span>
+                                <span>Best: <strong id="best-streak">0</strong> days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-buttons">
+                        <button id="clear-all-btn">Clear All Data</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by HTML, CSS, JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
